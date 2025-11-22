@@ -20,3 +20,27 @@ jobs:
             i=$((i+1))
           done
           echo -e "\n✅ Klaar!"
+      - name: Spinner animatie 2
+        run: |
+          i=0
+          sp='|/-\'
+          echo "Start animatie..."
+          while [ $i -lt 20 ]
+          do
+            printf "\r${sp:i%4:1} Bezig..."
+            sleep 0.2
+            i=$((i+1))
+          done
+          echo -e "\n✅ Klaar!"
+      - name: Spinner animatie 3
+        run: |
+          i=0
+          sp='|/-\'
+          echo "Start animatie..."
+          while [ $i -lt 20 ]
+          do
+            printf "\r${sp:i%4:1} Bezig..."
+            sleep 0.2
+            i=$((i+1))
+          done
+          echo -e "\n✅ Klaar!"
