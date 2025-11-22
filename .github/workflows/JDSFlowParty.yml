@@ -1,0 +1,22 @@
+name: JDS Projects Party Workflow
+on: [push]
+
+jobs:
+  animate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Spinner animatie
+        run: |
+          i=0
+          sp='|/-\'
+          echo "Start animatie..."
+          while [ $i -lt 20 ]
+          do
+            printf "\r${sp:i%4:1} Bezig..."
+            sleep 0.2
+            i=$((i+1))
+          done
+          echo -e "\n✅ Klaar!"
